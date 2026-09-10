@@ -5,7 +5,7 @@
   <br />
   <br />
 
-  [![VS Code Marketplace](https://img.shields.io/badge/VS_Code_Marketplace-v1.0.1-10b981?logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=yusufalhelou.vscode-smart-comment)
+  [![VS Code Marketplace](https://img.shields.io/badge/VS_Code_Marketplace-v1.0.2-10b981?logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=yusufalhelou.vscode-smart-comment)
   [![GitHub Release](https://img.shields.io/github/v/release/yusufalhelou/vscode-smart-comment?color=06b6d4&label=Release)](https://github.com/yusufalhelou/vscode-smart-comment/releases)
   [![License: MIT](https://img.shields.io/badge/License-MIT-emerald.svg)](https://opensource.org/licenses/MIT)
   [![Author](https://img.shields.io/badge/Author-Yusuf%20Alhelou-10b981.svg)](https://github.com/yusufalhelou)
@@ -25,9 +25,25 @@ When working on modern single-page applications, micro-frontends, or monolithic 
 
 - **HTML comments (`<!-- ... -->`)** crash Babel with `SyntaxError: Unexpected token '<'`.
 - **JS line comments (`//`)** inside JSX render as literal text nodes in the DOM.
+- **JS block comments (`/* ... */`)** inside JSX children render as literal text without actually disabling the elements.
 - Existing extensions check only the file extension (`.html`) and insert the wrong comment syntax.
 
 **Smart Comment** eliminates this friction by inspecting the exact syntactic context of your cursor or selection and applying the correct commenting syntax dynamically.
+
+---
+
+## 💡 How It Compares
+
+| Code Context | Default IDE (`Ctrl+/`) | Generic Comment Extensions | Smart Comment |
+| :--- | :--- | :--- | :--- |
+| **JSX Child Element**<br>`<div><button /></div>` | ❌ Inserts bare `/* ... */`<br>*(Renders text literals to DOM)* | ⚠️ Inserts `<!-- -->` in HTML<br>*(Babel compiler crashes)* | ✅ **`{/* <button /> */}`**<br>*(Cleanly removed from render tree)* |
+| **JSX Tag Attribute**<br>`<button onClick={fn}>` | ❌ Inserts line comments `//`<br>*(Breaks opening tag syntax)* | ❌ Inserts `{/* ... */}`<br>*(Invalid syntax inside tag)* | ✅ **`<button /* onClick={fn} */>`**<br>*(Clean attribute block comment)* |
+| **React in `<script>` block** | ❌ File-extension bound (`<!-- -->`) | ❌ Requires manual configuration | ✅ **Auto-detects Babel blocks** |
+| **Pure JavaScript in Script** | ⚠️ Inconsistent line vs block comments | ⚠️ Inconsistent line vs block comments | ✅ **Clean `//` line or block comments** |
+| **Pure HTML Markup** | ✅ Inserts `<!-- ... -->` | ✅ Inserts `<!-- ... -->` | ✅ **`<!-- ... -->` outside script tags** |
+| **CSS Styles** | ⚠️ Often conflicts with HTML comments | Requires manual switching | ✅ **`/* ... */` inside `<style>` or `.css`** |
+| **Uncommenting (2-Way Toggle)** | ❌ Often leaves orphan braces `{` `}` | ⚠️ Often strips indentation | ✅ **Lossless toggle: restores original code** |
+| **Package Weight** | Built-in | ⚠️ Heavy dependencies & LSP processes | ✅ **Zero dependencies, under 120 KB** |
 
 ---
 
@@ -78,6 +94,12 @@ In **VS Code** or **Antigravity IDE**:
 2. **Editor Header Button:** Click the comment icon `💬` at the top-right of your editor tab.
 3. **Status Bar:** Click **`$(comment) Smart Comment`** on the bottom right status bar.
 4. **Code Action (Lightbulb):** Click the `💡` lightbulb on any selection ➔ **Toggle Smart Comment**.
+
+### 💡 Pro Tip: Make Smart Comment Your Default `Ctrl + /`
+If you want Smart Comment to replace VS Code's default comment shortcut entirely:
+1. Open Keyboard Shortcuts (`Ctrl + K, Ctrl + S` or `Cmd + K, Cmd + S` on macOS).
+2. Search for: `Smart Comment / Uncomment`.
+3. Double-click it and press **`Ctrl + /`** (or **`Cmd + /`**).
 
 ---
 

@@ -2,7 +2,7 @@
   "name": "vscode-smart-comment",
   "displayName": "Smart Comment (JSX, HTML & JS)",
   "description": "Context-aware smart comment & uncomment for JSX inside HTML, Babel scripts, React, and multi-syntax files.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "publisher": "yusufalhelou",
   "author": {
     "name": "Yusuf Alhelou",
