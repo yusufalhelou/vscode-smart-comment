@@ -1,10 +1,21 @@
 # Smart Comment for VS Code & Antigravity IDE
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-emerald.svg)](https://opensource.org/licenses/MIT)
-[![VS Code](https://img.shields.io/badge/VS%20Code-1.80.0+-blue.svg)](https://code.visualstudio.com/)
-[![Author](https://img.shields.io/badge/Author-Yusuf%20Alhelou-10b981.svg)](https://github.com/yusufalhelou)
+<div align="center">
+  <img src="icon.png" width="128" height="128" alt="Smart Comment Logo" />
+  <br />
+  <br />
 
-> **Context-aware commenting that actually understands JSX embedded in HTML, Babel script tags, React components, CSS, and JavaScript.**
+  [![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/yusufalhelou.vscode-smart-comment.svg?color=10b981&label=Marketplace)](https://marketplace.visualstudio.com/items?itemName=yusufalhelou.vscode-smart-comment)
+  [![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/yusufalhelou.vscode-smart-comment.svg?color=06b6d4)](https://marketplace.visualstudio.com/items?itemName=yusufalhelou.vscode-smart-comment)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-emerald.svg)](https://opensource.org/licenses/MIT)
+  [![Author](https://img.shields.io/badge/Author-Yusuf%20Alhelou-10b981.svg)](https://github.com/yusufalhelou)
+
+  <p align="center">
+    <strong>Context-aware commenting that actually understands JSX embedded in HTML, Babel script tags, React components, CSS, and JavaScript.</strong>
+  </p>
+
+  [**Install from Marketplace**](https://marketplace.visualstudio.com/items?itemName=yusufalhelou.vscode-smart-comment) • [**Report Bug**](https://github.com/yusufalhelou/vscode-smart-comment/issues) • [**Download VSIX**](https://github.com/yusufalhelou/vscode-smart-comment/releases)
+</div>
 
 ---
 
@@ -16,7 +27,7 @@ When working on modern single-page applications, micro-frontends, or monolithic 
 - **JS line comments (`//`)** inside JSX render as literal text nodes in the DOM.
 - Existing extensions check only the file extension (`.html`) and insert the wrong comment syntax.
 
-**Smart Comment** eliminates this friction by inspecting the exact syntactic context of your selection and applying the correct commenting syntax dynamically.
+**Smart Comment** eliminates this friction by inspecting the exact syntactic context of your cursor or selection and applying the correct commenting syntax dynamically.
 
 ---
 
@@ -32,6 +43,30 @@ When working on modern single-page applications, micro-frontends, or monolithic 
 
 ---
 
+## 🚀 Installation
+
+### Option 1: Official Marketplace (Recommended)
+
+In **VS Code** or **Antigravity IDE**:
+1. Press `Ctrl+P` (or `Cmd+P`), paste the following command, and press **Enter**:
+   ```bash
+   ext install yusufalhelou.vscode-smart-comment
+   ```
+2. *Or* open the **Extensions** view (`Ctrl+Shift+X`), search for **`Smart Comment`** (by **Yusuf Alhelou**), and click **Install**.
+
+👉 **[View on Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=yusufalhelou.vscode-smart-comment)**
+
+---
+
+### Option 2: Manual VSIX Installation
+
+In **VS Code** or **Antigravity IDE**:
+1. Download the latest `.vsix` package from the [Releases](https://github.com/yusufalhelou/vscode-smart-comment/releases) tab.
+2. In **VS Code** or **Antigravity IDE**, press `Ctrl+Shift+P` (or `Cmd+Shift+P`).
+3. Choose **Extensions: Install from VSIX...** and select the downloaded file.
+
+---
+
 ## ⌨️ Controls & Shortcuts
 
 | Action | Shortcut (Windows/Linux) | Shortcut (macOS) | Alternate |
@@ -40,7 +75,7 @@ When working on modern single-page applications, micro-frontends, or monolithic 
 
 ### Also Available Via:
 1. **Right-Click Context Menu:** Highlight any code ➔ Right-Click ➔ **Smart Comment / Uncomment (Context-Aware)**.
-2. **Editor Header Button:** Click the comment icon `💬` at the top-right of your editor.
+2. **Editor Header Button:** Click the comment icon `💬` at the top-right of your editor tab.
 3. **Status Bar:** Click **`$(comment) Smart Comment`** on the bottom right status bar.
 4. **Code Action (Lightbulb):** Click the `💡` lightbulb on any selection ➔ **Toggle Smart Comment**.
 
@@ -58,21 +93,6 @@ When working on modern single-page applications, micro-frontends, or monolithic 
 
 ---
 
-## 🚀 Installation
-
-### Option 1: Manual VSIX Install (Instant)
-1. Download the latest `.vsix` from the [Releases](https://github.com/yusufalhelou/vscode-smart-comment/releases) page.
-2. In VS Code or Antigravity IDE, press `Ctrl+Shift+P` ➔ **Extensions: Install from VSIX...** ➔ select the downloaded file.
-
-### Option 2: Build from Source
-```bash
-git clone https://github.com/yusufalhelou/vscode-smart-comment.git
-cd vscode-smart-comment
-npm test
-```
-
----
-
 ## 🧪 Testing
 
 Run the included automated unit test suite:
@@ -86,7 +106,8 @@ node test/run_tests.js
 
 **Yusuf Alhelou**
 - GitHub: [@yusufalhelou](https://github.com/yusufalhelou)
-- Email: yusufalhelou@gmail.com
+- Marketplace: [yusufalhelou](https://marketplace.visualstudio.com/publishers/yusufalhelou)
+- Contact: contact@yusufalhelou.com
 
 ---
 
