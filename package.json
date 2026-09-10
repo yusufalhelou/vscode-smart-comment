@@ -1,85 +1,88 @@
-﻿{
-    "name":  "vscode-smart-comment",
-    "displayName":  "Smart Comment (JSX, HTML \u0026 JS)",
-    "description":  "Context-aware smart comment \u0026 uncomment for JSX inside HTML, Babel scripts, React, and multi-syntax files.",
-    "version":  "1.0.0",
-    "publisher":  "yusufalhelou",
-    "author":  {
-                   "name":  "Yusuf Alhelou",
-                   "email":  "yusufalhelou@gmail.com"
-               },
-    "license":  "MIT",
-    "homepage":  "https://github.com/yusufalhelou/vscode-smart-comment#readme",
-    "repository":  {
-                       "type":  "git",
-                       "url":  "https://github.com/yusufalhelou/vscode-smart-comment.git"
-                   },
-    "bugs":  {
-                 "url":  "https://github.com/yusufalhelou/vscode-smart-comment/issues"
-             },
-    "keywords":  [
-                     "comment",
-                     "jsx",
-                     "react",
-                     "babel",
-                     "html",
-                     "javascript",
-                     "context-comment",
-                     "keybindings"
-                 ],
-    "engines":  {
-                    "vscode":  "^1.80.0"
-                },
-    "categories":  [
-                       "Programming Languages",
-                       "Keymaps",
-                       "Other"
-                   ],
-    "activationEvents":  [
-                             "onStartupFinished"
-                         ],
-    "main":  "./extension.js",
-    "scripts":  {
-                    "test":  "node test/run_tests.js"
-                },
-    "contributes":  {
-                        "commands":  [
-                                         {
-                                             "command":  "smartComment.toggle",
-                                             "title":  "Smart Comment / Uncomment (Context-Aware)",
-                                             "category":  "Smart Comment",
-                                             "icon":  "$(comment)"
-                                         }
-                                     ],
-                        "keybindings":  [
-                                            {
-                                                "command":  "smartComment.toggle",
-                                                "key":  "ctrl+alt+/",
-                                                "mac":  "cmd+alt+/",
-                                                "when":  "editorTextFocus"
-                                            },
-                                            {
-                                                "command":  "smartComment.toggle",
-                                                "key":  "alt+/",
-                                                "mac":  "alt+/",
-                                                "when":  "editorTextFocus"
-                                            }
-                                        ],
-                        "menus":  {
-                                      "editor/context":  [
-                                                             {
-                                                                 "command":  "smartComment.toggle",
-                                                                 "group":  "modification@1"
-                                                             }
-                                                         ],
-                                      "editor/title":  [
-                                                           {
-                                                               "command":  "smartComment.toggle",
-                                                               "group":  "navigation",
-                                                               "when":  "editorTextFocus"
-                                                           }
-                                                       ]
-                                  }
-                    },
-    "icon":  "icon.png"
+{
+  "name": "vscode-smart-comment",
+  "displayName": "Smart Comment (JSX, HTML & JS)",
+  "description": "Context-aware smart comment & uncomment for JSX inside HTML, Babel scripts, React, and multi-syntax files.",
+  "version": "1.0.1",
+  "publisher": "yusufalhelou",
+  "author": {
+    "name": "Yusuf Alhelou",
+    "email": "yusufalhelou@gmail.com"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/yusufalhelou/vscode-smart-comment#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yusufalhelou/vscode-smart-comment.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yusufalhelou/vscode-smart-comment/issues"
+  },
+  "keywords": [
+    "comment",
+    "jsx",
+    "react",
+    "babel",
+    "html",
+    "javascript",
+    "context-comment",
+    "keybindings"
+  ],
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Keymaps",
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./extension.js",
+  "scripts": {
+    "test": "node test/run_tests.js"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "smartComment.toggle",
+        "title": "Smart Comment / Uncomment (Context-Aware)",
+        "category": "Smart Comment",
+        "icon": "$(comment)"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "smartComment.toggle",
+        "key": "ctrl+alt+/",
+        "mac": "cmd+alt+/",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "smartComment.toggle",
+        "key": "alt+/",
+        "mac": "alt+/",
+        "when": "editorTextFocus"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "smartComment.toggle",
+          "group": "modification@1"
+        }
+      ],
+      "editor/title": [
+        {
+          "command": "smartComment.toggle",
+          "group": "navigation",
+          "when": "editorTextFocus"
+        }
+      ]
+    }
+  },
+  "icon": "icon.png",
+  "devDependencies": {
+    "@vscode/vsce": "^3.9.2"
+  }
 }

@@ -1,6 +1,12 @@
-# Changelog
+﻿# Changelog
 
 All notable changes to the "vscode-smart-comment" extension will be documented in this file.
+
+## [1.0.1] - 2026-09-10
+### Added
+- Master transparent vector icon (SVG & PNG).
+- Visual Studio Marketplace installation links and badges.
+- Explicit support documentation for both VS Code and Antigravity IDE.
 
 ## [1.0.0] - 2026-09-10
 ### Initial Release
@@ -11,5 +17,3 @@ All notable changes to the "vscode-smart-comment" extension will be documented i
 - HTML comment toggling (`<!-- ... -->`).
 - CSS comment toggling (`/* ... */`).
 - Bidirectional round-trip toggle (comment & uncomment) with indentation preservation.
-- Keyboard shortcuts: `Ctrl+Alt+/` and `Alt+/` (Windows/Linux) / `Cmd+Alt+/` (macOS).
-- Context menu, editor title bar icon, status bar button, and refactoring lightbulb code actions.

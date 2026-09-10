@@ -5,8 +5,8 @@
   <br />
   <br />
 
-  [![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/yusufalhelou.vscode-smart-comment.svg?color=10b981&label=Marketplace)](https://marketplace.visualstudio.com/items?itemName=yusufalhelou.vscode-smart-comment)
-  [![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/yusufalhelou.vscode-smart-comment.svg?color=06b6d4)](https://marketplace.visualstudio.com/items?itemName=yusufalhelou.vscode-smart-comment)
+  [![VS Code Marketplace](https://img.shields.io/badge/VS_Code_Marketplace-v1.0.1-10b981?logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=yusufalhelou.vscode-smart-comment)
+  [![GitHub Release](https://img.shields.io/github/v/release/yusufalhelou/vscode-smart-comment?color=06b6d4&label=Release)](https://github.com/yusufalhelou/vscode-smart-comment/releases)
   [![License: MIT](https://img.shields.io/badge/License-MIT-emerald.svg)](https://opensource.org/licenses/MIT)
   [![Author](https://img.shields.io/badge/Author-Yusuf%20Alhelou-10b981.svg)](https://github.com/yusufalhelou)
 

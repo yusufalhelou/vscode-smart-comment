@@ -1,0 +1,119 @@
+<svg viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <!-- Deep Obsidian Background -->
+      <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#0F172A"/>
+        <stop offset="50%" stop-color="#090E17"/>
+        <stop offset="100%" stop-color="#020617"/>
+      </linearGradient>
+
+      <!-- Vibrant Emerald to Cyan Gradient -->
+      <linearGradient id="neonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#10B981"/>
+        <stop offset="60%" stop-color="#05DF72"/>
+        <stop offset="100%" stop-color="#00F0FF"/>
+      </linearGradient>
+
+      <!-- Bubble Interior Dark Gradient -->
+      <linearGradient id="bubbleFill" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#152033"/>
+        <stop offset="100%" stop-color="#0B1320"/>
+      </linearGradient>
+
+      <!-- Soft Neon Glow -->
+      <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+        <feDropShadow dx="0" dy="10" stdDeviation="18" flood-color="#10B981" flood-opacity="0.45"/>
+      </filter>
+    </defs>
+
+    <!-- Outer Squircle with Double Precision Border -->
+    <rect width="512" height="512" rx="112" fill="url(#bgGrad)"/>
+    <rect x="3" y="3" width="506" height="506" rx="109" stroke="#1E293B" stroke-width="4"/>
+    <rect x="6" y="6" width="500" height="500" rx="106" stroke="url(#neonGrad)" stroke-width="1.5" opacity="0.3"/>
+
+    <!-- Subtle Radial Glow Behind Bubble -->
+    <circle cx="256" cy="256" r="160" fill="#10B981" opacity="0.1" filter="blur(40px)"/>
+
+    <!-- Perfectly Centered, Wide Speech Bubble -->
+    <g filter="url(#neonGlow)">
+      <path d="M 86 140
+               C 86 106, 114 80, 150 80
+               L 362 80
+               C 398 80, 426 106, 426 140
+               L 426 310
+               C 426 344, 398 370, 362 370
+               L 200 370
+               L 130 430
+               C 120 438, 108 430, 110 418
+               L 116 370
+               C 98 366, 86 346, 86 310
+               Z"
+            fill="url(#bubbleFill)"
+            stroke="url(#neonGrad)"
+            stroke-width="14"
+            stroke-linejoin="round"
+            stroke-linecap="round"/>
+    </g>
+
+    <!-- Inner Glass Highlight Line -->
+    <path d="M 102 144
+             C 102 118, 124 98, 152 98
+             L 360 98
+             C 388 98, 410 118, 410 144
+             L 410 306
+             C 410 332, 388 352, 360 352
+             L 194 352
+             L 132 404
+             L 128 352
+             C 112 348, 102 332, 102 306
+             Z"
+          fill="none"
+          stroke="#334155"
+          stroke-width="1.5"
+          opacity="0.4"/>
+
+    <!-- Centered High-Contrast Typography: {/* */} -->
+    <g text-anchor="middle" dominant-baseline="central">
+      <!-- Left Curly Brace { -->
+      <text x="142" y="222" 
+            font-family="system-ui, -apple-system, 'SF Mono', 'JetBrains Mono', 'Fira Code', monospace" 
+            font-size="118" 
+            font-weight="900" 
+            fill="#38BDF8">&#123;</text>
+
+      <!-- Slash / -->
+      <text x="194" y="220" 
+            font-family="system-ui, -apple-system, 'SF Mono', 'JetBrains Mono', 'Fira Code', monospace" 
+            font-size="94" 
+            font-weight="700" 
+            fill="#E2E8F0">/</text>
+
+      <!-- Asterisk * -->
+      <text x="232" y="234" 
+            font-family="system-ui, -apple-system, 'SF Mono', 'JetBrains Mono', 'Fira Code', monospace" 
+            font-size="112" 
+            font-weight="900" 
+            fill="#00F5A0">&#42;</text>
+
+      <!-- Asterisk * -->
+      <text x="280" y="234" 
+            font-family="system-ui, -apple-system, 'SF Mono', 'JetBrains Mono', 'Fira Code', monospace" 
+            font-size="112" 
+            font-weight="900" 
+            fill="#00F5A0">&#42;</text>
+
+      <!-- Slash / -->
+      <text x="318" y="220" 
+            font-family="system-ui, -apple-system, 'SF Mono', 'JetBrains Mono', 'Fira Code', monospace" 
+            font-size="94" 
+            font-weight="700" 
+            fill="#E2E8F0">/</text>
+
+      <!-- Right Curly Brace } -->
+      <text x="370" y="222" 
+            font-family="system-ui, -apple-system, 'SF Mono', 'JetBrains Mono', 'Fira Code', monospace" 
+            font-size="118" 
+            font-weight="900" 
+            fill="#38BDF8">&#125;</text>
+    </g>
+  </svg>
